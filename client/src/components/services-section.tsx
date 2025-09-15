@@ -18,7 +18,7 @@ export default function ServicesSection() {
             Our Services
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="services-description">
-            Discover our comprehensive range of beauty and wellness treatments designed to enhance your natural beauty
+            Professional grooming services crafted exclusively for the modern man. Expert techniques, premium products, exceptional results.
           </p>
         </div>
 
