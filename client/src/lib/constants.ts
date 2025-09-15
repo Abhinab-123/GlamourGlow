@@ -26,7 +26,7 @@ export const SERVICES = [
   {
     id: 'facial-treatments',
     title: 'Men\'s Facials',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     services: [
       { name: 'Deep Cleanse Facial', price: '500' },
       { name: 'Anti-Pollution Facial', price: '600' },
@@ -62,7 +62,7 @@ export const SERVICES = [
   {
     id: 'grooming-extras',
     title: 'Additional Grooming',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     services: [
       { name: 'Eyebrow Trim', price: '60' },
       { name: 'Nose Hair Trim', price: '40' },
