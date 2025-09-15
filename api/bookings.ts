@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { storage } from '../server/storage';
+import { storage } from '../server/db-storage';
 import { insertBookingSchema } from '../shared/schema';
 import { fromZodError } from 'zod-validation-error';
 
