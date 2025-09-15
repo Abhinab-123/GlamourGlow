@@ -83,10 +83,6 @@ export const GALLERY_IMAGES = [
     alt: 'Expert beard grooming and trimming',
   },
   {
-    url: 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    alt: 'Men\'s facial and skincare treatment',
-  },
-  {
     url: 'https://images.unsplash.com/photo-1622286346003-c6d8e8f67602?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
     alt: 'Modern barbershop experience',
   },
@@ -95,15 +91,19 @@ export const GALLERY_IMAGES = [
     alt: 'Classic hot towel shave service',
   },
   {
-    url: 'https://images.unsplash.com/photo-1624205112918-0e381b0fb1ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    url: 'https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
     alt: 'Men\'s hair styling and grooming',
   },
   {
-    url: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    url: 'https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
     alt: 'Hair treatment and spa services for men',
   },
   {
-    url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    url: 'https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
     alt: 'Men\'s hair color and grey coverage',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
+    alt: 'Men\'s facial and skincare treatment',
   },
 ];
