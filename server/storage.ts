@@ -8,6 +8,7 @@ export interface IStorage {
   createBooking(booking: InsertBooking): Promise<Booking>;
   getAllBookings(): Promise<Booking[]>;
   getBooking(id: string): Promise<Booking | undefined>;
+  getBookingsByPhone(phone: string): Promise<Booking[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -57,6 +58,12 @@ export class MemStorage implements IStorage {
 
   async getBooking(id: string): Promise<Booking | undefined> {
     return this.bookings.get(id);
+  }
+
+  async getBookingsByPhone(phone: string): Promise<Booking[]> {
+    return Array.from(this.bookings.values())
+      .filter(booking => booking.phone === phone)
+      .sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
   }
 }
 
