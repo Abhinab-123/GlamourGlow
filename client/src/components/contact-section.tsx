@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 interface BookingForm {
   name: string;
@@ -26,34 +24,19 @@ export default function ContactSection() {
     time: "",
   });
 
-  const bookingMutation = useMutation({
-    mutationFn: async (data: BookingForm) => {
-      const response = await apiRequest("POST", "/api/bookings", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Booking Submitted",
-        description: "We'll contact you soon to confirm your appointment.",
-      });
-      setFormData({
-        name: "",
-        phone: "",
-        service: "",
-        date: "",
-        time: "",
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Booking Failed",
-        description: "Please try again or call us directly.",
-        variant: "destructive",
-      });
-    },
-  });
+  const getServiceTitle = (serviceValue: string) => {
+    const services: Record<string, string> = {
+      "hair-care": "Haircuts & Styling",
+      "beard-grooming": "Beard & Shave Services", 
+      "facial-treatments": "Men's Facials",
+      "spa-services": "Spa & Treatments",
+      "color-treatments": "Color & Grey Coverage",
+      "grooming-extras": "Additional Grooming"
+    };
+    return services[serviceValue] || serviceValue;
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleWhatsAppContact = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.phone || !formData.service) {
       toast({
@@ -63,7 +46,28 @@ export default function ContactSection() {
       });
       return;
     }
-    bookingMutation.mutate(formData);
+
+    const whatsappNumber = "917008544493"; // WhatsApp number for Trends Parlour
+    const serviceTitle = getServiceTitle(formData.service);
+    
+    let message = `Hi! I'd like to book an appointment.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${serviceTitle}`;
+    
+    if (formData.date) {
+      message += `\nPreferred Date: ${formData.date}`;
+    }
+    if (formData.time) {
+      message += `\nPreferred Time: ${formData.time}`;
+    }
+    
+    message += `\n\nPlease confirm availability. Thank you!`;
+    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    toast({
+      title: "Opening WhatsApp",
+      description: "Redirecting you to WhatsApp to complete your booking.",
+    });
   };
 
   return (
@@ -137,7 +141,7 @@ export default function ContactSection() {
               <h4 className="text-xl font-serif font-semibold text-foreground mb-6" data-testid="booking-form-title">
                 Book Appointment
               </h4>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleWhatsAppContact} className="space-y-4">
                 <Input
                   type="text"
                   placeholder="Your Name"
@@ -185,11 +189,10 @@ export default function ContactSection() {
                 </div>
                 <Button
                   type="submit"
-                  disabled={bookingMutation.isPending}
-                  className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                  data-testid="button-submit-booking"
+                  className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  data-testid="button-whatsapp-contact"
                 >
-                  {bookingMutation.isPending ? "Submitting..." : "Book Appointment"}
+                  Contact via WhatsApp
                 </Button>
               </form>
             </CardContent>
