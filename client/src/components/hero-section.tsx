@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`,
         }}
       />
       <div className="absolute inset-0 hero-gradient opacity-75" />
@@ -30,12 +30,15 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto animate-fadeIn">
           <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6" data-testid="hero-title">
-            Beauty & Wellness
-            <span className="block text-accent">Redefined</span>
+            Men's Grooming.
+            <span className="block text-accent">Elevated.</span>
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light" data-testid="hero-description">
-            Experience luxury beauty treatments in our modern salon with expert stylists and premium services
+            Expert grooming services exclusively for men. Professional barbers, premium products, modern techniques.
           </p>
+          <div className="bg-accent text-white px-4 py-2 rounded-full inline-block mb-6 font-semibold">
+            EXCLUSIVELY FOR MEN
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={scrollToServices}
