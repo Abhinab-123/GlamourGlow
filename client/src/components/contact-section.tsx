@@ -74,8 +74,11 @@ export default function ContactSection() {
             Visit Us
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="contact-description">
-            Book your appointment today and experience the best in beauty and wellness services
+            Book your appointment today and experience professional grooming services designed exclusively for men.
           </p>
+          <div className="bg-accent text-white px-6 py-2 rounded-full inline-block mt-4 font-semibold">
+            EXCLUSIVELY FOR MEN
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -101,8 +104,8 @@ export default function ContactSection() {
                   <div className="flex items-start space-x-3" data-testid="contact-address">
                     <MapPin className="text-primary h-5 w-5 mt-1" />
                     <span>
-                      Trends Parlour & Spa<br />
-                      Modern Beauty Center<br />
+                      Trends Men's Grooming Lounge<br />
+                      Professional Barbershop & Spa<br />
                       Your Location Here
                     </span>
                   </div>
@@ -156,10 +159,12 @@ export default function ContactSection() {
                     <SelectValue placeholder="Select Service" />
                   </SelectTrigger>
                   <SelectContent data-testid="select-service-content">
-                    <SelectItem value="hair-care" data-testid="select-service-hair">Hair Care</SelectItem>
-                    <SelectItem value="facial-treatment" data-testid="select-service-facial">Facial Treatment</SelectItem>
-                    <SelectItem value="spa-service" data-testid="select-service-spa">Spa Service</SelectItem>
-                    <SelectItem value="beard-grooming" data-testid="select-service-beard">Beard & Grooming</SelectItem>
+                    <SelectItem value="hair-care" data-testid="select-service-hair">Haircuts & Styling</SelectItem>
+                    <SelectItem value="beard-grooming" data-testid="select-service-beard">Beard & Shave Services</SelectItem>
+                    <SelectItem value="facial-treatments" data-testid="select-service-facial">Men's Facials</SelectItem>
+                    <SelectItem value="spa-services" data-testid="select-service-spa">Spa & Treatments</SelectItem>
+                    <SelectItem value="color-treatments" data-testid="select-service-color">Color & Grey Coverage</SelectItem>
+                    <SelectItem value="grooming-extras" data-testid="select-service-extras">Additional Grooming</SelectItem>
                   </SelectContent>
                 </Select>
                 <div className="grid grid-cols-2 gap-4">
