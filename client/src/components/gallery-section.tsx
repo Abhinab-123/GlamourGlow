@@ -9,7 +9,7 @@ export default function GallerySection() {
             Our Work
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="gallery-description">
-            See the transformations and beautiful results from our expert stylists and beauty professionals
+            Witness the artistry of professional men's grooming. Sharp cuts, perfect shaves, and refined styling by our master barbers.
           </p>
         </div>
 
