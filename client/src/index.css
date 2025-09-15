@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(20, 20%, 98%);
+  --foreground: hsl(20, 10%, 15%);
+  --card: hsl(20, 20%, 96%);
+  --card-foreground: hsl(20, 10%, 15%);
+  --popover: hsl(20, 20%, 98%);
+  --popover-foreground: hsl(20, 10%, 15%);
+  --primary: hsl(342, 68%, 32%);
+  --primary-foreground: hsl(20, 20%, 98%);
+  --secondary: hsl(20, 15%, 91%);
+  --secondary-foreground: hsl(20, 10%, 20%);
+  --muted: hsl(20, 10%, 88%);
+  --muted-foreground: hsl(20, 5%, 45%);
+  --accent: hsl(18, 35%, 75%);
+  --accent-foreground: hsl(20, 10%, 15%);
+  --destructive: hsl(356, 90%, 54%);
+  --destructive-foreground: hsl(20, 20%, 98%);
+  --border: hsl(20, 20%, 90%);
+  --input: hsl(20, 20%, 90%);
+  --ring: hsl(342, 68%, 32%);
+  --chart-1: hsl(342, 68%, 32%);
+  --chart-2: hsl(18, 35%, 75%);
+  --chart-3: hsl(20, 15%, 91%);
+  --chart-4: hsl(20, 10%, 88%);
+  --chart-5: hsl(20, 5%, 45%);
+  --sidebar: hsl(20, 20%, 96%);
+  --sidebar-foreground: hsl(20, 10%, 15%);
+  --sidebar-primary: hsl(342, 68%, 32%);
+  --sidebar-primary-foreground: hsl(20, 20%, 98%);
+  --sidebar-accent: hsl(18, 35%, 75%);
+  --sidebar-accent-foreground: hsl(20, 10%, 15%);
+  --sidebar-border: hsl(20, 20%, 90%);
+  --sidebar-ring: hsl(342, 68%, 32%);
+  --font-sans: Inter, sans-serif;
+  --font-serif: Playfair Display, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(20, 10%, 8%);
+  --foreground: hsl(20, 20%, 92%);
+  --card: hsl(20, 10%, 12%);
+  --card-foreground: hsl(20, 20%, 92%);
+  --popover: hsl(20, 10%, 8%);
+  --popover-foreground: hsl(20, 20%, 92%);
+  --primary: hsl(342, 68%, 45%);
+  --primary-foreground: hsl(20, 20%, 98%);
+  --secondary: hsl(20, 10%, 20%);
+  --secondary-foreground: hsl(20, 15%, 85%);
+  --muted: hsl(20, 10%, 18%);
+  --muted-foreground: hsl(20, 5%, 60%);
+  --accent: hsl(18, 35%, 35%);
+  --accent-foreground: hsl(20, 20%, 92%);
+  --destructive: hsl(356, 90%, 54%);
+  --destructive-foreground: hsl(20, 20%, 98%);
+  --border: hsl(20, 10%, 20%);
+  --input: hsl(20, 10%, 20%);
+  --ring: hsl(342, 68%, 45%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
