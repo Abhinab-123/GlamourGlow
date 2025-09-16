@@ -50,9 +50,8 @@ export default function HeroSection() {
             </Button>
             <Button
               onClick={scrollToContact}
-              variant="outline"
               size="lg"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors"
+              className="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition-colors"
               data-testid="button-call-now"
             >
               <Phone className="mr-2 h-4 w-4" />
