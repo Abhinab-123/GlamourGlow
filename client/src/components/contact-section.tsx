@@ -47,7 +47,7 @@ export default function ContactSection() {
       return;
     }
 
-    const whatsappNumber = "917008544493"; // WhatsApp number for Trends Parlour
+    const whatsappNumber = "917656938017"; // WhatsApp number for Trends Parlour
     const serviceTitle = getServiceTitle(formData.service);
     
     let message = `Hi! I'd like to book an appointment.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${serviceTitle}`;
