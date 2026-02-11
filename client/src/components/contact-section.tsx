@@ -92,19 +92,14 @@ export default function ContactSection() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3" data-testid="contact-phone-1">
                     <Phone className="text-primary h-5 w-5" />
-                    <span>+91 90402 39357</span>
+                    <span>+91 9040239357</span>
                   </div>
                   <div className="flex items-start space-x-3" data-testid="contact-address">
                     <MapPin className="text-primary h-5 w-5 mt-1" />
-                    <a 
-                      href="https://maps.app.goo.gl/287YWsoAkKG7AdU3A" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors"
-                    >
+                    <span>
                       Trends Men's Grooming Lounge<br />
                       Plot:763 S/3, Niladri Vihar Rd, Sailashree Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021
-                    </a>
+                    </span>
                   </div>
                 </div>
               </CardContent>

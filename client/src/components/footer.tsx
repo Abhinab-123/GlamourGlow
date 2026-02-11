@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60" data-testid="footer-copyright">
-          <p>&copy; 2024 Trends Parlour & Spa. All rights reserved. | Modern Beauty & Wellness Center</p>
+          <p>&copy; 2026 Trends Parlour & Spa. All rights reserved. | Modern Beauty & Wellness Center</p>
         </div>
       </div>
     </footer>

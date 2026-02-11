@@ -30,7 +30,7 @@ export const SERVICES = [
   {
     id: 'facials-skincare',
     title: 'Facials & Skincare',
-    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&h=400',
     services: [
       { name: 'Normal Facial (Fruit)', price: '700' },
       { name: 'Diamond / Gold Facial', price: '1200' },
