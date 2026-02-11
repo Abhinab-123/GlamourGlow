@@ -17,9 +17,6 @@ export default function ServicesSection() {
           <h3 className="text-4xl font-serif font-bold text-foreground mb-4" data-testid="services-title">
             Our Services
           </h3>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="services-description">
-            Professional grooming services crafted exclusively for the modern man. Expert techniques, premium products, exceptional results.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
