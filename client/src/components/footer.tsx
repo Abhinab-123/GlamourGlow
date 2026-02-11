@@ -36,6 +36,15 @@ export default function Footer() {
               >
                 Gallery
               </button>
+              <a
+                href="https://maps.app.goo.gl/287YWsoAkKG7AdU3A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-white transition-colors text-left"
+                data-testid="footer-link-location"
+              >
+                Location
+              </a>
               <button
                 onClick={() => scrollToSection("#contact")}
                 className="block hover:text-white transition-colors text-left"

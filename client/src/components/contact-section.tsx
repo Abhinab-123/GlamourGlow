@@ -47,7 +47,7 @@ export default function ContactSection() {
       return;
     }
 
-    const whatsappNumber = "917656938017"; // WhatsApp number for Trends Parlour
+    const whatsappNumber = "919040239357"; // WhatsApp number for Trends Parlour
     const serviceTitle = getServiceTitle(formData.service);
     
     let message = `Hi! I'd like to book an appointment.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${serviceTitle}`;
@@ -75,14 +75,11 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-4xl font-serif font-bold text-foreground mb-4" data-testid="contact-title">
-            Visit Us
+            Book Appointment
           </h3>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto" data-testid="contact-description">
             Book your appointment today and experience professional grooming services designed exclusively for men.
           </p>
-          <div className="bg-accent text-white px-6 py-2 rounded-full inline-block mt-4 font-semibold">
-            EXCLUSIVELY FOR MEN
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -95,23 +92,19 @@ export default function ContactSection() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3" data-testid="contact-phone-1">
                     <Phone className="text-primary h-5 w-5" />
-                    <span>7008544493</span>
-                  </div>
-                  <div className="flex items-center space-x-3" data-testid="contact-phone-2">
-                    <Phone className="text-primary h-5 w-5" />
-                    <span>9008544493</span>
-                  </div>
-                  <div className="flex items-center space-x-3" data-testid="contact-email">
-                    <Mail className="text-primary h-5 w-5" />
-                    <span>info@trendsparlour.com</span>
+                    <span>+91 90402 39357</span>
                   </div>
                   <div className="flex items-start space-x-3" data-testid="contact-address">
                     <MapPin className="text-primary h-5 w-5 mt-1" />
-                    <span>
+                    <a 
+                      href="https://maps.app.goo.gl/287YWsoAkKG7AdU3A" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
                       Trends Men's Grooming Lounge<br />
-                      Professional Barbershop & Spa<br />
-                      Your Location Here
-                    </span>
+                      Plot:763 S/3, Niladri Vihar Rd, Sailashree Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021
+                    </a>
                   </div>
                 </div>
               </CardContent>

@@ -7,13 +7,19 @@ const navigationItems = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#gallery", label: "Gallery" },
+  { href: "https://maps.app.goo.gl/287YWsoAkKG7AdU3A", label: "Location", isExternal: true },
   { href: "#contact", label: "Contact" },
 ];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      window.open(href, '_blank');
+      setIsOpen(false);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -39,7 +45,7 @@ export default function Navigation() {
             {navigationItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => scrollToSection(item.href, item.isExternal)}
                 className="text-foreground hover:text-primary transition-colors"
                 data-testid={`nav-link-${item.label.toLowerCase()}`}
               >
@@ -68,7 +74,7 @@ export default function Navigation() {
                   {navigationItems.map((item) => (
                     <button
                       key={item.href}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => scrollToSection(item.href, item.isExternal)}
                       className="text-left text-foreground hover:text-primary transition-colors py-2"
                       data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
                     >
